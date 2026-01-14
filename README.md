@@ -14,6 +14,7 @@ If you have questions about this template after following the instructions, try 
 To get started on your first bootc image, simply read and follow the steps in the next few headings.
 If you prefer instructions in video form, TesterTech created an excellent tutorial, embedded below.
 
+> [See more details at Bluefin repository](https://github.com/ublue-os/bluefin/tree/main)
 [![Video Tutorial](https://img.youtube.com/vi/IxBl11Zmq5w/0.jpg)](https://www.youtube.com/watch?v=IxBl11Zmq5wE)
 
 ## Step 0: Prerequisites
