@@ -28,6 +28,9 @@ dnf5 install -y \
 # install homebrew
 eval "$(curl -fsSL "https://raw.githubusercontent.com/andrepg/dotfiles/refs/heads/main/distro-setup/brew.sh")"
 
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+echo "eval \"\$($(brew --prefix)/bin/brew shellenv)\"" >> ~/.bashrc
+
 # install oh-my-bash
 eval "$(curl -fsSL "https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh")"
 
