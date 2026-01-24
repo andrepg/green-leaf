@@ -26,10 +26,10 @@ dnf5 install -y \
     xz
 
 # install homebrew
-eval "$(curl -fsSL "https://raw.githubusercontent.com/andrepg/dotfiles/refs/heads/main/distro-setup/brew.sh")"
 
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-echo "eval \"\$($(brew --prefix)/bin/brew shellenv)\"" >> ~/.bashrc
+# Note: This file is breaking our build because our original script must look for brew on path first
+# eval "$(curl -fsSL "https://raw.githubusercontent.com/andrepg/dotfiles/refs/heads/main/distro-setup/brew.sh")"
+eval "$(curl -fsSL 'https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh')"
 
 # install oh-my-bash
 eval "$(curl -fsSL "https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh")"
@@ -37,51 +37,6 @@ eval "$(curl -fsSL "https://raw.githubusercontent.com/ohmybash/oh-my-bash/master
 # install VSCode
 eval "$(curl -fsSL "https://raw.githubusercontent.com/andrepg/supercow/refs/heads/main/vscode-updater.sh")"
 
-## Instal Brew packages
-brew install \
-    composer \
-    docker-compose \
-    git \
-    gh \
-    just \
-    node \
-    shellcheck \
-    yarn \
-    yarn-completion
-
-## Check if we can install prime-tools
-
-## Flatpak drivers and utils
-flatpak install --system --noninteractive --assumeyes \
-    org.freedesktop.Platform \
-    org.freedesktop.Platform.Compat \
-    org.freedesktop.Platform.codec-extra \
-    org.freedesktop.Platform.ffmpeg-full \
-    org.freedesktop.Platform.GL.default \
-    org.freedesktop.Platform.GL32.default \
-    org.freedesktop.Platform.VAAPI.Intel \
-    org.freedesktop.Platform.VAAPI.nvidia \
-    org.freedesktop.Platform.openh264 \
-    org.freedesktop.Platform.openh265 \
-    org.freedesktop.Sdk \
-    org.freedesktop.Sdk.Extension.node24 \
-    org.freedesktop.Sdk.Extension.rust-stable \
-    org.freedesktop.Sdk.Extension.typescript \
-    org.gnome.Platform
-
-## Flatpak applications
-flatpak install --user --noninteractive --assumeyes \
-    com.mattjakeman.ExtensionManager \
-    com.github.tchx84.Flatseal \
-    io.github.BuddysirJava.SSH-Studio \
-    io.github.flattool.Warehouse \
-    io.github.getnf.embellish \
-    it.mijorus.GearLever \
-    it.mijorus.smile \
-    org.libreoffice.LibreOffice \
-    org.gnome.font-viewer \
-    org.gnome.gitlab.cheywood.Buffer \
-    org.gnome.World.PikaBackup
 
 ## Personalize services 
 systemctl disable --now podman.socket
