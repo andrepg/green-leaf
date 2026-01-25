@@ -11,8 +11,6 @@ set -ouex pipefail
 
 # this installs a package from fedora repos
 dnf5 install -y \
-    # Enable if we need to install akmods-based packages, as in non-nvidia distros
-    # akmods \
     btop \
     binutils \
     gcc \
