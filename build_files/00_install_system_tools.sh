@@ -11,7 +11,8 @@ set -ouex pipefail
 
 # this installs a package from fedora repos
 dnf5 install -y \
-    akmods \
+    # Enable if we need to install akmods-based packages, as in non-nvidia distros
+    # akmods \
     btop \
     binutils \
     gcc \
@@ -21,7 +22,6 @@ dnf5 install -y \
     rpmdevtools \
     smartmontools \
     tmux \
-    tailscale \
     waydroid \
     xz
 
@@ -29,13 +29,10 @@ dnf5 install -y \
 
 # Note: This file is breaking our build because our original script must look for brew on path first
 # eval "$(curl -fsSL "https://raw.githubusercontent.com/andrepg/dotfiles/refs/heads/main/distro-setup/brew.sh")"
-eval "$(curl -fsSL 'https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh')"
+# eval "$(curl -fsSL 'https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh')"
 
-# install oh-my-bash
-eval "$(curl -fsSL "https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh")"
-
-# install VSCode
-eval "$(curl -fsSL "https://raw.githubusercontent.com/andrepg/supercow/refs/heads/main/vscode-updater.sh")"
+# # install oh-my-bash
+# eval "$(curl -fsSL "https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh")"
 
 
 ## Personalize services 
