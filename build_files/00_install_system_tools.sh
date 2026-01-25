@@ -17,6 +17,7 @@ dnf5 install -y \
     libgcc \
     libgda \
     libgda-sqlite \
+    love \
     rpmdevtools \
     smartmontools \
     tmux \

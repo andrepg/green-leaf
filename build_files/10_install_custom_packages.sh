@@ -11,22 +11,20 @@ set -ouex pipefail
 flatpak install flathub --or-update --system --noninteractive --assumeyes \
     org.freedesktop.Platform/x86_64/25.08 \
     org.freedesktop.Platform.codecs-extra \
-    org.freedesktop.Platform.ffmpeg-full \
-    org.freedesktop.Platform.GL.default \
-    org.freedesktop.Platform.GL32.default \
-    org.freedesktop.Platform.GStreamer.openmpt \
-    org.freedesktop.Platform.VAAPI.Intel \
-    org.freedesktop.Platform.VAAPI.nvidia \
-    org.freedesktop.Platform.VulkanLayer.gamescope \
-    org.freedesktop.Platform.VulkanLayer.OBSVkCapture \
-    org.freedesktop.Platform.openh264 \
-    org.freedesktop.Platform.openh265 \
-    org.freedesktop.Sdk \
-    org.freedesktop.Sdk.Extension.node24 \
-    org.freedesktop.Sdk.Extension.rust-stable \
-    org.freedesktop.Sdk.Extension.typescript \
-    org.gnome.Platform \
-    org.gnome.Sdk
+    org.freedesktop.Platform.ffmpeg-full/x86_64/23.08 \
+    org.freedesktop.Platform.GL.default/x86_64/25.08 \
+    org.freedesktop.Platform.GL32.default/x86_64/25.08 \
+    org.freedesktop.Platform.VAAPI.Intel/x86_64/25.08  \
+    org.freedesktop.Platform.VAAPI.nvidia/x86_64/25.08 \
+    org.freedesktop.Platform.VulkanLayer.gamescope/x86_64/25.08 \
+    org.freedesktop.Platform.VulkanLayer.OBSVkCapture/x86_64/25.08 \
+    org.freedesktop.Platform.openh264/x86_64/2.5.1 \
+    org.freedesktop.Sdk/x86_64/25.08 \
+    org.freedesktop.Sdk.Extension.node24/x86_64/25.08 \
+    org.freedesktop.Sdk.Extension.rust-stable/x86_64/25.08 \
+    org.freedesktop.Sdk.Extension.typescript/x86_64/25.08 \
+    org.gnome.Platform/x86_64/49 \
+    org.gnome.Sdk/x86_64/49
 
 ## Flatpak applications
 #
