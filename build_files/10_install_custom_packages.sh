@@ -17,7 +17,7 @@ set -ouex pipefal
 ## Check if we can install prime-tools
 
 ## Flatpak drivers and utils
-flatpak install --system --noninteractive --assumeyes \
+flatpak install flathub --or-update --system --noninteractive --assumeyes \
     org.freedesktop.Platform \
     org.freedesktop.Platform.Compat \
     org.freedesktop.Platform.codec-extra \
@@ -35,7 +35,7 @@ flatpak install --system --noninteractive --assumeyes \
     org.gnome.Platform
 
 ## Flatpak applications
-flatpak install --user --noninteractive --assumeyes \
+flatpak install flathub --or-update --user --noninteractive --assumeyes \
     com.mattjakeman.ExtensionManager \
     com.github.tchx84.Flatseal \
     io.github.BuddysirJava.SSH-Studio \

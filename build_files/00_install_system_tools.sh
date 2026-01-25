@@ -36,8 +36,6 @@ dnf5 install -y \
 ## Personalize services 
 systemctl disable --now podman.socket
 systemctl disable --now podman.service
-
-systemctl --user disable --now org.gnome.SettingsDaemon.Smartcard.service
 systemctl --user disable --now podman.socket
 systemctl --user disable --now podman.service
 
