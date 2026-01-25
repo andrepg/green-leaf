@@ -12,7 +12,7 @@ on:
   workflow_dispatch:
 
 env:
-  IMAGE_DESC: "A highly optionionated Fedora developer OCI image"
+  IMAGE_DESC: "A highly opinionated Fedora developer OCI image"
   IMAGE_KEYWORDS: "fedora,developer,oci"
   IMAGE_LOGO_URL: "https://avatars.githubusercontent.com/u/120078124?s=200&v=4" # Put your own image here for a fancy profile on https://artifacthub.io/!
   IMAGE_NAME: "${{ github.event.repository.name }}" # output image name, usually same as repo name
